@@ -16,9 +16,11 @@ point.draw()
 
 
 class pointtwo:
+
     def __init__(self, x, y):
         self.x = x
         self.y = y
+        self.__privateVar = {}
 
     def useTwoPoints(self):
         print(self.x*self.y)
@@ -36,3 +38,6 @@ print(point.default_farve)
 # Man kan tilføje variabler efter at en class er lavet:
 classtwo.p = "SeeDisShiet?"
 print(classtwo.p)
+
+# Alle attributes kan fidnes via dict, også private
+print("ARGH ", classtwo.__dict__)
